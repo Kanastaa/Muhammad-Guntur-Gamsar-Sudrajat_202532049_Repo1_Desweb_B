@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayangan Estetik | Formulir Catatan</title>
+</head>
+<body>
+    <header>
+        <p>Bayangan Estetik</p>
+        <p>Latihan fotografi dari cahaya yang ada di sekitar kita.</p>
+        <nav aria-label="Navigasi utama">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="panduan.html">Panduan pengamatan</a></li>
+                <li><a href="catatan.html" aria-current="page">Formulir catatan</a></li>
+                <li><a href="hasil.html">Tentang simulasi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="konten-utama">
+        <h1>Catatan pengamatan bayangan</h1>
+        <p>Formulir ini digunakan untuk demonstrasi HTML. Gunakan data contoh seperti Pengamat A dan pengamat@example.com. Data tidak disimpan dalam basis data.</p>
+        <p id="bantuan-form">Semua kolom wajib diisi. Isian diteruskan melalui URL ke halaman simulasi, sehingga jangan memasukkan data pribadi.</p>
+
+        <section aria-labelledby="isi-catatan">
+            <h2 id="isi-catatan">Isi catatan latihan</h2>
+            <h3>Identitas contoh dan hasil pengamatan</h3>
+            <form action="hasil.html" method="get" aria-describedby="bantuan-form">
+                <fieldset>
+                    <legend>Identitas pengamat contoh</legend>
+                    <p>
+                        <label for="nama">Nama contoh</label><br>
+                        <input type="text" id="nama" name="nama" minlength="2" maxlength="60" placeholder="Pengamat A" required>
+                    </p>
+                    <p>
+                        <label for="email">Email contoh</label><br>
+                        <input type="email" id="email" name="email" maxlength="100" placeholder="pengamat@example.com" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Catatan pengamatan</legend>
+                    <p>
+                        <label for="objek">Objek yang diamati</label><br>
+                        <select id="objek" name="objek" required>
+                            <option value="">Pilih satu objek</option>
+                            <option value="kisi-jendela">Kisi jendela</option>
+                            <option value="pagar">Pagar halaman</option>
+                            <option value="dedaunan">Dedaunan</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="tanggal">Tanggal pengamatan</label><br>
+                        <input type="date" id="tanggal" name="tanggal" required>
+                    </p>
+                    <p>
+                        <label for="jumlah">Jumlah foto percobaan (1 sampai 10)</label><br>
+                        <input type="number" id="jumlah" name="jumlah" min="1" max="10" step="1" required>
+                    </p>
+                    <p>
+                        <label for="deskripsi">Deskripsi pola (minimal 15 karakter)</label><br>
+                        <textarea id="deskripsi" name="deskripsi" rows="4" cols="40" minlength="15" maxlength="400" required></textarea>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="data-contoh" name="data_contoh" value="ya" required>
+                        <label for="data-contoh">Saya memakai data contoh untuk simulasi praktikum.</label>
+                    </p>
+                </fieldset>
+
+                <p><button type="submit">Jalankan simulasi catatan</button></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Project praktikum Desain Web 1 | Muhammad Guntur Gamsar Sudrajat | 202532049 | Kelas B</p>
+        <p>Website statis dibuat menggunakan HTML tanpa CSS dan JavaScript.</p>
+    </footer>
+</body>
+</html>
